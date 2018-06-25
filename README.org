@@ -1,0 +1,16 @@
+#+TITLE: Org/LaTeX diff Docker image
+#+AUTHOR: Stefanos Carlström
+#+EMAIL: stefanos.carlstrom@gmail.com
+
+This repository contains a recipe for building Docker images that can
+be used for diffing Org/LaTeX files, e.g. when building pull requests
+for LaTeX repositories.
+
+* Build instructions
+  To build the docker image, issue
+  #+BEGIN_SRC sh
+    docker build . -t latex-diff-docker
+  #+END_SRC
+  which will install all necessary packages from Ubuntu's
+  repositories, install the [[https://github.com/jagot/org-diff][Org::Diff gem]] and up-to-date [[https://orgmode.org][Org-mode]]
+  packages for Emacs.
